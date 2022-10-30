@@ -40,6 +40,11 @@ impl Cpuinfo {
 }
 
 fn main() {
+
+    // filename "/proc/cpuinfo
+    // The proc file system is a pseudo-file system which is used as an interface to kernel data structures.
+    // It is commonly mounted at /proc. Most of it is read-only, but some files allow kernel variables to be changed.
+
     let strucpu: Cpuinfo = Cpuinfo::load(String::from("/proc/cpuinfo"));
 
     println!("Model -> {}", strucpu.model);
